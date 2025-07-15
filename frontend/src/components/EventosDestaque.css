@@ -1,0 +1,148 @@
+/* Estilos para Eventos em Destaque */
+.eventos-destaque {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.eventos-destaque h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contêiner para limitar o tamanho do carrossel */
+.eventos-destaque .carrossel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* Estilos para o carrossel */
+.slick-track {
+  display: flex;
+  gap: 20px;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+/* Card de Evento */
+.eventos-destaque .evento-card {
+  background-color: #f1f1f1;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+}
+
+.eventos-destaque .evento-card:hover {
+  transform: translateY(-6px);
+}
+
+.eventos-destaque .evento-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Título do Evento */
+.eventos-destaque .evento-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+  min-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+/* Descrição do Evento */
+.eventos-destaque .evento-card p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Dots de navegação */
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-prev,
+.slick-next {
+  color: #e63946;
+  font-size: 20px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .eventos-destaque .carrossel-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventos-destaque {
+    padding: 15px 10px;
+  }
+
+  .eventos-destaque .carrossel-container {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .eventos-destaque .evento-card {
+    padding: 12px;
+    min-width: 200px;
+  }
+
+  .eventos-destaque .evento-card img {
+    height: 150px;
+  }
+
+  .eventos-destaque h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventos-destaque {
+    padding: 10px 5px;
+  }
+
+  .eventos-destaque .evento-card {
+    min-width: 180px;
+    padding: 10px;
+  }
+
+  .eventos-destaque .evento-card img {
+    height: 130px;
+  }
+
+  .eventos-destaque h2 {
+    font-size: 20px;
+  }
+}

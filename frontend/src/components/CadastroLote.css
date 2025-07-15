@@ -1,0 +1,47 @@
+.cadastro-lote-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cadastro-lote-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.cadastro-lote-container input,
+.cadastro-lote-container select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5500a7;
+}
+
+.erro {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.sucesso {
+  color: green;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,153 @@
+.modal-perfil-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-perfil {
+  background-color: #fff;
+  max-width: 600px;
+  width: 95%;
+  max-height: 90vh;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-titulo {
+  margin: 0;
+  padding: 16px 24px;
+  background-color: #424a4f;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.modal-layout {
+  display: flex;
+  flex: 1;
+  min-height: 400px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal-abas-lateral {
+  background-color: #f8f8f8;
+  padding: 16px 0;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+}
+
+.aba-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.aba-item:hover {
+  background-color: #f0f0f0;
+}
+
+.aba-item.ativa {
+  background-color: #fff;
+  border-left: 4px solid #424a4f;
+  color: #e63946;
+  font-weight: 600;
+}
+
+.modal-conteudo {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(90vh - 60px);  /* Ajusta para o header */
+}
+
+.conteudo-scroll {
+  display: flex;
+  flex-direction: column;
+}
+
+.mensagem-inicial {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+.salvar {
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.salvar:hover {
+  background-color: #d62839;
+}
+
+.link-senha-wrapper,
+.cancelar-senha-wrapper {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.link-senha,
+.cancelar-senha {
+  background: none;
+  border: none;
+  color: #e63946;
+  cursor: pointer;
+  padding: 8px;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.link-senha:hover,
+.cancelar-senha:hover {
+  color: #d62839;
+}
+
+.senha-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}

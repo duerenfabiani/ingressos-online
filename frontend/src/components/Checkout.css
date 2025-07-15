@@ -1,0 +1,186 @@
+.checkout-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Evento Info */
+.checkout-evento-info {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.checkout-evento-info h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.checkout-local,
+.checkout-data {
+  color: #555;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Box de compra */
+.checkout-box {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.checkout-box-content {
+  background: #fff;
+  padding: 20px;
+}
+
+.checkout-lote-nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.checkout-preco-unitario {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.checkout-validade {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Formulário de participantes */
+.checkout-form {
+  background: #fff;
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.checkout-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  color: #333;
+}
+
+.participante-bloco {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.participante-bloco h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #444;
+}
+
+.checkout-form label {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.checkout-form input:focus {
+  border-color: #6a0dad;
+  outline: none;
+}
+
+.checkout-form button {
+  margin-top: 24px;
+  padding: 12px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.checkout-form button:hover {
+  background: #5500a7;
+}
+
+/* Quantidade */
+.checkout-preco-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.checkout-quantidade {
+  font-weight: bold;
+  color: #333;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Paypal botão container */
+.paypal-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Erro */
+.erro {
+  color: red;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: bold;
+}

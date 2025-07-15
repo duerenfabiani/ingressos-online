@@ -1,0 +1,107 @@
+.cliente-login-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cliente-login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e63946;
+}
+
+.google-btn,
+.apple-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.google-btn {
+  background-color: #4285F4;
+}
+.google-btn:hover {
+  background-color: #3367D6;
+}
+
+.apple-btn {
+  background-color: #333;
+}
+.apple-btn:hover {
+  background-color: #000;
+}
+
+.ou-separador {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #9b1c2e;
+}
+
+.esqueceu-link {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #e63946;
+  text-decoration: none;
+}
+
+.esqueceu-link:hover {
+  text-decoration: underline;
+}
+
+.criar-conta-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.criar-conta-link a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.criar-conta-link a:hover {
+  text-decoration: underline;
+}

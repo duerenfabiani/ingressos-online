@@ -1,0 +1,242 @@
+/* Reset de Estilos */
+
+/* Corpo da Página */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Página Principal */
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da página */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #212121;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+header .logo h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+header button {
+  background-color: #212121;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: 212121;
+  transform: scale(1.05);
+}
+
+/* Seção de Busca */
+.search {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 40px; /* Espaçamento entre as seções */
+}
+
+.search h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #e63946;
+}
+
+.search form {
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 30px;
+  border: 2px solid #e63946;
+  font-size: 16px;
+}
+
+.search button {
+  padding: 12px 20px;
+  background-color: #e63946;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+
+.search button:hover {
+  background-color: #9b1c2e;
+  transform: scale(1.05);
+}
+
+/* Seção Principal: Agenda e Eventos em Destaque */
+.principal {
+  flex: 1; 
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 30px 20px;
+  margin-bottom: 40px; /* Ajustando o espaçamento entre as seções */
+}
+
+/* Eventos em Destaque */
+.eventos-destaque {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.eventos-destaque h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.eventos-destaque .evento-card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventos-destaque .evento-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.eventos-destaque .evento-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Agenda */
+.agenda {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.agenda h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.agenda-container {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+  overflow-x: auto; /* Habilita a rolagem horizontal */
+  scroll-snap-type: x mandatory; /* Permite o "snap" ao rolar */
+}
+
+.agenda-item {
+  min-width: 80px;
+  height: 80px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  scroll-snap-align: start;
+  transition: background-color 0.3s;
+}
+
+.agenda-item.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.agenda-item span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.agenda-item .evento {
+  font-size: 12px;
+  color: #555;
+}
+
+.agenda-item:hover {
+  background-color: #ddd;
+}
+
+.agenda-item.disabled:hover {
+  background-color: #ccc;
+}
+
+/* Rodapé */
+footer {
+  background-color: #353535; /* Cor do fundo */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search input {
+    width: 100%;
+  }
+
+  .search button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .agenda-container {
+    gap: 5px; /* Reduzindo o espaçamento entre os itens da agenda */
+  }
+
+  .eventos-destaque .evento-card {
+    width: 100%;
+  }
+}

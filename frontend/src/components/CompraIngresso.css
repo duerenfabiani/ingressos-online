@@ -1,0 +1,197 @@
+/* CompraIngresso.css */
+.compra-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;  /* Para garantir que o conteúdo abaixo do banner não sobreponha a imagem */
+}
+
+.evento-banner {
+  width: 100%;
+  height: 250px;  /* Ajuste da altura do banner para ser mais baixo */
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* Coloca o banner acima dos outros elementos */
+}
+
+.evento-banner img {
+  width: 100%;
+  height: 100%;  /* Garantir que a imagem ocupe 100% do espaço do container */
+  object-fit: cover;  /* Ajusta a imagem para cobrir o espaço sem distorcer */
+  border-radius: 12px;
+}
+
+.evento-detalhes-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  position: relative;  /* Para garantir que o conteúdo não sobreponha o banner */
+}
+
+@media (max-width: 768px) {
+  .evento-detalhes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.evento-info {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  z-index: 2;  /* Garantir que o conteúdo fique acima de qualquer outro elemento */
+  position: relative;
+}
+
+.evento-info h2 {
+  margin-top: 0;
+}
+
+.evento-local,
+.evento-data {
+  color: #555;
+  margin-top: 8px;
+}
+
+.evento-descricao {
+  margin-top: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.compra-box {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.compra-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.compra-header-title {
+  text-align: left;
+}
+
+.compra-header-total {
+  text-align: right;
+}
+
+.compra-conteudo {
+  background: #fff;
+  padding: 16px;
+}
+
+.compra-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compra-lote-nome {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.compra-quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.compra-quantidade button {
+  background: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compra-quantidade button:hover {
+  background: #5500a7;
+}
+
+.compra-quantidade span {
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+
+.compra-validade {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
+
+.compra-divisor {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.compra-total {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 0;
+  background: #fff;
+}
+
+.compra-button {
+  background: #28a745;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.compra-button:hover {
+  background: #218838;
+}
+
+.erro {
+  color: red;
+  margin: 16px;
+}
+.evento-info h2 {
+  display: flex;
+  justify-content: space-between; /* Alinha o título à esquerda e o botão à direita */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 16px; /* Espaço inferior */
+}
+
+.classificacao-etaria-btn {
+  background-color: rgb(224, 2, 2); /* Cor de fundo vermelha */
+  color: white; /* Cor do texto branca */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 10px 10px; /* Espaçamento interno */
+  border-radius: 10%; /* Torna o botão redondo */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Aponta o cursor para indicar que é clicável */
+  font-weight: bold; /* Deixa o texto em negrito */
+  transition: background-color 0.2s ease; /* Transição suave ao passar o mouse */
+}
+
+.classificacao-etaria-btn:hover {
+  background-color: darkred; /* Altera a cor para um vermelho mais escuro ao passar o mouse */
+}
