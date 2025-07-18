@@ -81,11 +81,11 @@ html, body {
 .dashboard-content {
   flex: 1;
   overflow-y: auto;
-  background-color: #ffffff;
-  padding: 30px 40px;
+
   box-sizing: border-box;
   height: 100vh;
 }
+
 .dashboard-layout {
   display: flex;
   height: 100vh;
@@ -104,10 +104,3 @@ html, body {
   background-color: #f4f6f8;
 }
 
-.dashboard-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #ffffff;
-  overflow-y: auto;
-  box-sizing: border-box;
-}

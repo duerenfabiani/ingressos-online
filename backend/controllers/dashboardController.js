@@ -23,13 +23,12 @@ exports.getDashboardData = async (req, res) => {
       [organizadorId]
     );
 
-    // Contagem de ingressos vendidos
+    // Contagem de ingressos
     const [ingressosRows] = await db.query(
-        `SELECT COUNT(*) AS total_ingressos 
-        FROM ingressos i
-        JOIN lotes l ON i.lote_id = l.id
-        WHERE l.evento_id IN (SELECT id FROM eventos WHERE criado_por = ?)`,
-        [organizadorId]
+      `SELECT COUNT(*) AS total_ingressos 
+      FROM ingressos 
+      WHERE evento_id IN (SELECT id FROM eventos WHERE criado_por = ?)`,
+      [organizadorId]
     );
 
     // Pedidos Recentes

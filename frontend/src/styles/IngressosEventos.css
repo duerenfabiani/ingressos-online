@@ -1,0 +1,280 @@
+/* src/styles/IngressosEventos.css */
+
+.pagina-ingressos {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.cabecalho-ingressos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cabecalho-ingressos input[type="text"],
+.cabecalho-ingressos select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 220px;
+  background: white;
+}
+
+.cabecalho-ingressos button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cabecalho-ingressos button:hover {
+  background-color: #0056b3;
+}
+
+.lista-ingressos {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card-ingresso {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.card-top {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  background: rgb(70, 69, 69);
+}
+
+.card-top .titulo-ingresso {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-top .valor-ingresso {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-metricas {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-metricas .metrica {
+  flex: 1;
+}
+
+.card-metricas .metrica h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card-metricas .metrica span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-receita {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-receita h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.card-receita span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-acao {
+  margin-top: auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-acao button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-acao button:hover {
+  background-color: #0056b3;
+}
+
+.card-ingresso h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-ingresso p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.card-ingresso button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card-ingresso button:hover {
+  background-color: #218838;
+}
+
+/* Modal */
+
+.modal-ingresso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-conteudo {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-conteudo h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.modal-conteudo input,
+.modal-conteudo textarea,
+.modal-conteudo select {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.modal-conteudo label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.modal-conteudo textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-botoes button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-botoes button:first-child {
+  background-color: #dc3545;
+  color: white;
+}
+.modal-botoes button:first-child:hover {
+  background-color: #c82333;
+}
+
+.modal-botoes button:last-child {
+  background-color: #28a745;
+  color: white;
+}
+.modal-botoes button:last-child:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .lista-ingressos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Campo Pesquisa*/
+.campo-pesquisa {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+.campo-pesquisa input {
+  width: 100%;
+  padding: 0.6rem 2.2rem 0.6rem 0.8rem; /* espaço à direita para ícone */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+.icone-lupa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}

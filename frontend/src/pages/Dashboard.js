@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ModalPerfilOrganizador from './ModalPerfilOrganizador';
+import ModalPerfilOrganizador from '../components/ModalPerfilOrganizador';
 import '../styles/Dashboard.css';
 
 export default function Dashboard() {
@@ -9,7 +9,6 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [dashboardData, setDashboardData] = useState(null);
 
-  // ⚡ 1️⃣ Primeiro useEffect para pegar ID salvo no localStorage
   useEffect(() => {
     const usuarioSalvo = JSON.parse(localStorage.getItem('usuario'));
     if (usuarioSalvo && usuarioSalvo.id) {
@@ -21,7 +20,6 @@ export default function Dashboard() {
     }
   }, []);
 
-  // ⚡ 2️⃣ Segundo useEffect para carregar dados do organizador e decidir abrir Modal
   useEffect(() => {
     if (!organizadorId) return;
 
@@ -69,12 +67,11 @@ export default function Dashboard() {
   const handleSavePerfil = () => {
     setShowModal(false);
     setLoading(true);
-    // ⚡ Depois de salvar perfil, recarrega para validar no banco novamente
     window.location.reload();
   };
 
   if (loading) {
-    return <div className="dashboard-container">Carregando...</div>;
+    return <div className="dashboard-container"><div className="loader">Carregando...</div></div>;
   }
 
   return (
@@ -87,52 +84,54 @@ export default function Dashboard() {
       )}
 
       {!showModal && dashboardData && (
-        <>
-          <h1 className="dashboard-title">Dashboard - {nomeProdutora}</h1>
+        <div className="dashboard-content">
+          <h1 className="dashboard-title">Dashboard <span className="produtora-name">{nomeProdutora}</span></h1>
 
-          <div className="dashboard-cards">
-            <div className="card">
-              <h2>Nº Eventos</h2>
-              <p>{dashboardData.numero_eventos}</p>
+          <div className="stats-cards">
+            <div className="stats-card">
+              <h3>Nº de Eventos</h3>
+              <p className="stats-value">{dashboardData.numero_eventos}</p>
             </div>
-            <div className="card">
-              <h2>Ingressos Vendidos</h2>
-              <p>{dashboardData.ingressos_vendidos}</p>
+            <div className="stats-card">
+              <h3>Ingressos Vendidos</h3>
+              <p className="stats-value">{dashboardData.ingressos_vendidos}</p>
             </div>
           </div>
 
-          <div className="dashboard-sections">
-            <div className="section">
-              <h2>Pedidos Recentes</h2>
+          <div className="sections-grid">
+            <div className="section-card">
+              <h2>📦 Pedidos Recentes</h2>
               {dashboardData.pedidos_recentess.length ? (
-                <ul>
+                <ul className="list">
                   {dashboardData.pedidos_recentess.map((pedido, index) => (
-                    <li key={index}>
-                      {pedido.comprador_nome} - {pedido.comprador_email}
+                    <li key={index} className="list-item">
+                      <strong>{pedido.comprador_nome}</strong><br />
+                      <span>{pedido.comprador_email}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p>Sem pedidos recentes.</p>
+                <p className="empty-text">Sem pedidos recentes.</p>
               )}
             </div>
 
-            <div className="section">
-              <h2>Próximos Eventos</h2>
+            <div className="section-card">
+              <h2>📅 Próximos Eventos</h2>
               {dashboardData.proximos_eventos.length ? (
-                <ul>
+                <ul className="list">
                   {dashboardData.proximos_eventos.map((evento, index) => (
-                    <li key={index}>
-                      {evento.nome} - {evento.data}
+                    <li key={index} className="list-item">
+                      <strong>{evento.nome}</strong><br />
+                      <span>{evento.data}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p>Sem eventos futuros.</p>
+                <p className="empty-text">Sem eventos futuros.</p>
               )}
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

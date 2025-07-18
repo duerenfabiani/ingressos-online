@@ -1,0 +1,84 @@
+.customizar-evento-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.customizar-evento-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+.customizar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.customizar-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #444;
+  font-size: 15px;
+}
+
+.customizar-form input[type="text"],
+.customizar-form input[type="datetime-local"],
+.customizar-form select,
+.customizar-form input[type="file"] {
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+}
+
+.customizar-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.customizar-form .row > div {
+  flex: 1;
+}
+
+.preview-img {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn-salvar {
+  background-color: #0d6efd;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-salvar:hover {
+  background-color: #0b5ed7;
+}
+
+@media (max-width: 768px) {
+  .customizar-evento-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .customizar-form .row {
+    flex-direction: column;
+  }
+}
