@@ -33,11 +33,13 @@ import DetalhamentoEvento from './pages/eventos/editarevento/painel/Detalhamento
 import CustomizarEvento from './pages/eventos/editarevento/painel/CustomizarEvento';
 
 import Marketing from './pages/eventos/ferramentas/Marketing';
-import Checkin from './pages/eventos/ferramentas/Checkin';
 import Promoters from './pages/eventos/ferramentas/Promoters';
 import Perguntas from './pages/eventos/ferramentas/Perguntas';
 import CodigosAcesso from './pages/eventos/ferramentas/CodigosAcesso';
 import AjudaEvento from './pages/eventos/ferramentas/AjudaEvento';
+
+// Check-in exclusivo (sem layout)
+import CheckInPage from './pages/eventos/editarevento/painel/CheckIn';
 
 import './styles/Home.css';
 
@@ -65,7 +67,7 @@ function App() {
         <Route path="cliente-cadastro" element={<ClienteCadastro />} />
       </Route>
 
-      {/* Área Protegida - Dashboard */}
+      {/* Área Protegida com DashboardLayout */}
       <Route
         path="/"
         element={
@@ -80,8 +82,7 @@ function App() {
         <Route path="customizar" element={<Customizar />} />
         <Route path="ajuda" element={<RedirecionaAjuda />} />
 
-        {/* Editar Evento com subroutes */}
-          <Route path="eventos/:id/editar" element={<EditarEvento />}>
+        <Route path="eventos/:id/editar" element={<EditarEvento />}>
           <Route path="painel" element={<PainelEvento />} />
           <Route path="ingressos" element={<IngressosEvento />} />
           <Route path="pedidos" element={<PedidosEvento />} />
@@ -89,16 +90,23 @@ function App() {
           <Route path="financeiro" element={<FinanceiroEvento />} />
           <Route path="detalhamento" element={<DetalhamentoEvento />} />
           <Route path="customizar" element={<CustomizarEvento />} />
-
-          {/* Ferramentas */}
           <Route path="marketing" element={<Marketing />} />
-          <Route path="check-in" element={<Checkin />} />
           <Route path="promoters" element={<Promoters />} />
           <Route path="perguntas" element={<Perguntas />} />
           <Route path="codigos-acesso" element={<CodigosAcesso />} />
           <Route path="ajuda" element={<AjudaEvento />} />
         </Route>
       </Route>
+
+      {/* Rota de Check-in (sem menu lateral) */}
+      <Route
+        path="/evento/:id/checkin"
+        element={
+          <PrivateRoute>
+            <CheckInPage />
+          </PrivateRoute>
+        }
+      />
     </Routes>
   );
 }

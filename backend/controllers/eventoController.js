@@ -51,7 +51,7 @@ exports.getEventoPorId = async (req, res) => {
 
   try {
     const [result] = await db.query(
-      `SELECT id, nome, descricao, banner_url, data_inicio, data_fim, local 
+      `SELECT id, titulo AS nome, descricao, banner_url, data_inicio, data_fim, local 
        FROM eventos 
        WHERE id = ?`,
       [id]
@@ -75,3 +75,4 @@ exports.getEventoPorId = async (req, res) => {
     res.status(500).json({ erro: 'Erro ao buscar evento.' });
   }
 };
+

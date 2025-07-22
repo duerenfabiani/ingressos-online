@@ -26,6 +26,10 @@
     -->
     <title>React App</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module">
+      import QrScanner from "https://cdn.jsdelivr.net/npm/qr-scanner@1.4.2/qr-scanner.min.js";
+      window.QrScanner = QrScanner;
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

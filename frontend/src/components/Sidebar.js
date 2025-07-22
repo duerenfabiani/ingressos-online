@@ -11,6 +11,7 @@ import logo from '../assets/images/logo360.png';
 export default function Sidebar({ collapsed, toggleCollapsed, isEventoMenu = false, nomeProdutora = '', eventoId = '' }) {
   const [openMenuPrincipal, setOpenMenuPrincipal] = useState(true);
   const [openFerramentas, setOpenFerramentas] = useState(true);
+  const BASE_URL = process.env.REACT_APP_FRONTEND_URL || '';
 
   return (
     <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
@@ -62,6 +63,7 @@ export default function Sidebar({ collapsed, toggleCollapsed, isEventoMenu = fal
                 <FaArrowLeft className="icon" /> <span className="link-text">Voltar para {nomeProdutora}</span>
               </Link>
             </li>
+
             {/* Menu Principal */}
             <li className="sidebar-section-title" onClick={() => setOpenMenuPrincipal(!openMenuPrincipal)}>
               {!collapsed && <span className="section-text">Menu Principal</span>}
@@ -72,7 +74,6 @@ export default function Sidebar({ collapsed, toggleCollapsed, isEventoMenu = fal
 
             {openMenuPrincipal && (
               <>
-                
                 <li>
                   <Link to={`/eventos/${eventoId}/editar/painel`}>
                     <FaHome className="icon" /> <span className="link-text">Painel</span>
@@ -118,6 +119,7 @@ export default function Sidebar({ collapsed, toggleCollapsed, isEventoMenu = fal
                 {openFerramentas ? <FaChevronUp /> : <FaChevronDown />}
               </span>
             </li>
+
             {openFerramentas && (
               <>
                 <li>
@@ -126,9 +128,12 @@ export default function Sidebar({ collapsed, toggleCollapsed, isEventoMenu = fal
                   </Link>
                 </li>
                 <li>
-                  <Link to={`/eventos/${eventoId}/editar/check-in`}>
+                  <a
+                    href={`${BASE_URL}/evento/${eventoId}/checkin`}
+                    rel="noopener noreferrer"
+                  >
                     <FaCheckSquare className="icon" /> <span className="link-text">Check-in</span>
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to={`/eventos/${eventoId}/editar/promoters`}>

@@ -1,0 +1,111 @@
+.painel-evento {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.painel-valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.painel-valores .box {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.painel-valores .box:hover {
+  transform: translateY(-3px);
+}
+
+.painel-valores h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.painel-valores p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Gráficos em grid com responsividade */
+.graficos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.grafico-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.grafico-box h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+}
+
+/* Borderô */
+.bordero {
+  margin-top: 2rem;
+}
+
+.bordero h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.bordero table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.bordero thead {
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.bordero th,
+.bordero td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.bordero tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsivo extra */
+@media (max-width: 480px) {
+  .painel-valores p {
+    font-size: 1.1rem;
+  }
+
+  .grafico-box {
+    padding: 0.75rem;
+  }
+
+  .bordero table {
+    font-size: 0.85rem;
+  }
+}

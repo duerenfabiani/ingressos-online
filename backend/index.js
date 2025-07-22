@@ -10,6 +10,9 @@ const clienteRoutes = require('./routes/clienteRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const eventoRoutes = require('./routes/eventoRoutes');
 const ingressosRoutes = require('./routes/criaingressoRoutes');
+const dashboardEventoRoutes = require('./routes/dashboardEventoRoutes');
+const pedidosRoutes = require('./routes/pedidosRoutes');
+const participantesRoutes = require('./routes/participantesRoutes');
 
 dotenv.config();
 
@@ -25,6 +28,9 @@ app.use('/api/clientes', clienteRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/eventos', eventoRoutes);
 app.use('/api/ingressos', ingressosRoutes);
+app.use('/api/eventos-dashboard', dashboardEventoRoutes);
+app.use('/api/pedidos', pedidosRoutes);
+app.use('/api/participantes', participantesRoutes);
 
 app.use((req, res) => {
   res.status(404).send('Rota não encontrada');
